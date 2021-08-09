@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js';
 import Table from '../components/Table';
 import Price from '../components/Price';
+import BooPrice from '../components/BooPrice';
 
 export default function IndexPage() {
 
@@ -227,117 +228,8 @@ async function printCosmosChart() {
 }
 
 
-// async function printEthereumChart() {
-//   let { times, prices } = await ethereumData()
-
-//   let ethereumChart = document.getElementById('ethereumChart').getContext('2d');
-
-//   let gradient = ethereumChart.createLinearGradient(0, 0, 0, 400);
-
-//   gradient.addColorStop(0, 'rgba(78,56,216,.5)');
-//   gradient.addColorStop(.425, 'rgba(118,106,192,0)');
-
-//   Chart.defaults.global.defaultFontFamily = 'Red Hat Text';
-//   Chart.defaults.global.defaultFontSize = 12;
-
-//   createEthereumChart = new Chart(ethereumChart, {
-//     type: 'line',
-//     data: {
-//       labels: times,
-//       datasets: [{
-//         label: '$',
-//         data: prices,
-//         backgroundColor: gradient,
-//         borderColor: 'rgba(118,106,192,1)',
-//         borderJoinStyle: 'round',
-//         borderCapStyle: 'round',
-//         borderWidth: 3,
-//         pointRadius: 0,
-//         pointHitRadius: 10,
-//         lineTension: .2,
-//       }]
-//     },
-
-//     options: {
-//       title: {
-//         display: false,
-//         text: 'Heckin Chart!',
-//         fontSize: 35
-//       },
-
-//       legend: {
-//         display: false
-//       },
-
-//       layout: {
-//         padding: {
-//           left: 0,
-//           right: 0,
-//           top: 0,
-//           bottom: 0
-//         }
-//       },
-
-//       scales: {
-//         xAxes: [{
-//           display: false,
-//           gridLines: {}
-//         }],
-//         yAxes: [{
-//           display: false,
-//           gridLines: {}
-//         }]
-//       },
-
-//       tooltips: {
-//         callbacks: {
-//           //This removes the tooltip title
-//           title: function() {}
-//        },
-//         //this removes legend color
-//         displayColors: false,
-//         yPadding: 10,
-//         xPadding: 10,
-//         position: 'nearest',
-//         caretSize: 10,
-//         backgroundColor: 'rgba(255,255,255,.9)',
-//         bodyFontSize: 15,
-//         bodyFontColor: '#303030' 
-//       }
-//     }
-//   });
-// }
-
-
-/// Update current price ///
-// async function updateEthereumPrice() {
-//   let { times, prices } = await ethereumData()
-//   let currentPrice = prices[prices.length-1].toFixed(2);
-
-//   document.getElementById("ethPrice").innerHTML = "$" + currentPrice;
-// }
-
-async function updateCosmosPrice() {
-  let { times, prices } = await cosmosData()
-  let currentPrice = prices[prices.length-1].toFixed(2);
-
-  document.getElementById("atomPrice").innerHTML = "$" + currentPrice;
-}
-
-async function updateBitcoinPrice() {
-  let { times, prices } = await btcData()
-  let currentPrice = prices[prices.length-1].toFixed(2);
-
-  document.getElementById("btcPrice").innerHTML = "$" + currentPrice;
-}
-
-// updateEthereumPrice()
-updateCosmosPrice()
-updateBitcoinPrice()
-
 printBtcChart()
 printCosmosChart()
-// printEthereumChart()    
   });
 
 
@@ -365,7 +257,7 @@ printCosmosChart()
                   <h1>Spirit</h1>
                 </div>
                 <div className="details">
-                  <h2 className="asset-price" id="btcPrice" />
+                  {/* <h2 className="asset-price" id="btcPrice" />  */} <Price />
                 </div>
               </card>
               <canvas id="btcChart" />
@@ -380,7 +272,7 @@ printCosmosChart()
                   <h1>BOO</h1>
                 </div>
                 <div className="details">
-                  <h2 className="asset-price" id="atomPrice" />
+                  {/* <h2 className="asset-price" id="atomPrice" /> */} <BooPrice /> 
                 </div>
               </card>
               <canvas id="cosmosChart" />
@@ -404,7 +296,6 @@ printCosmosChart()
         </container>
       </div>
 
-      <Price />
 
       <Table />
 
