@@ -3,7 +3,6 @@ import Chart from 'chart.js';
 import Table from '../components/Table';
 import Price from '../components/Price';
 import BooPrice from '../components/BooPrice';
-
 export default function IndexPage() {
 
   useEffect(() => {    
@@ -153,7 +152,7 @@ async function printCosmosChart() {
 
   let gradient = cosmosChart.createLinearGradient(0, 0, 0, 400);
 
-  gradient.addColorStop(0, 'rgba(27,30,54,.5)');
+  gradient.addColorStop(0, 'rgba(27,30,74,.5)');
   gradient.addColorStop(.425, 'rgba(46,49,72,0)');
 
   Chart.defaults.global.defaultFontFamily = 'Red Hat Text';
@@ -260,6 +259,7 @@ printCosmosChart()
                   {/* <h2 className="asset-price" id="btcPrice" />  */} <Price />
                 </div>
               </card>
+
               <canvas id="btcChart" />
             </bitcoin>
             <cosmos style={{ width: "30%" }} className="cosmos">
@@ -298,7 +298,9 @@ printCosmosChart()
 
 
       <Table />
-
+            
+            <br />
+            
       <div>
         <p className="opacity-50 text-center">
           A{" "}

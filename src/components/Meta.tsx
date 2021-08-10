@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
 const Meta = () => {
-    const title = 'Caspers Top 10'
-    const description = 'Caspers Top 10 Tokens On Fantom Opera, We Think You Should Check Out.'
-    const url = 'https://top10.casperdefi.com'
+    const title = 'Spirit v Spooky'
+    const description = 'Caspers DeFi presents Spirit v Spooky, check the latest data from the top 2 Dexs on Fantom Opera.'
+    const url = 'https://spiritvboo.casperdefi.com'
 
     return (
         <Head>
-            <title>Caspers's Top Ten</title>
+            <title>Spirit v Spooky</title>
             <meta name="description" content={description} />
             <meta property="og:type" content="website" />
             <meta name="og:title" property="og:title" content={title} />
@@ -18,9 +18,9 @@ const Meta = () => {
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:site" content={url} />
-            <link rel="icon" type="image/png" href="https://fuckmikeether.casperdefi.com/img/fuck-mike-eth.jpg" />
-            <meta property="og:image" content="https://fuckmikeether.casperdefi.com/img/fuck-mike-eth.jpg" />
-            <meta name="twitter:image" content="https://fuckmikeether.casperdefi.com/img/fuck-mike-eth.jpg" />
+            <link rel="icon" type="image/png" href="https://spiritvboo.casperdefi.com/img/casper_ghost.png`" />
+            <meta property="og:image" content="https://spiritvboo.casperdefi.com/img/SpiritvBoo.png" />
+            <meta name="twitter:image" content="https://spiritvboo.casperdefi.com/img/SpiritvBoo.png" />
         </Head>
     )
 }
