@@ -15,7 +15,7 @@ export default function Table() {
             {spiritSwaps.map((swap, index) => 
                 <div key={index}  className="flex justify-center space-x-4">
                     <div>
-                        <p className={classNames('', swap.amount1Out > 0 ? 'text-green-400' : 'text-red-400')}>${Number(swap.amountUSD).toFixed(2)}</p>
+                        <p className={classNames('', swap.amount1Out > 0 ? 'text-green-400' : 'text-red-400')}>${Number(swap.amountUSD/2).toFixed(2)}</p>
                         <p className="text-xs">{dayjs.unix(swap.timestamp).format('hh:mm:ss')}</p> 
                     </div>
                     <div>
